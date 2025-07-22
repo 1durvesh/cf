@@ -1,0 +1,33 @@
+15  sudo mkdir /mnt/testdisk
+   16  lsblk
+   17  sudo mount /dev/sdc /mnt/testdisk
+   18  sudo mount /dev/sdc mnt/testdisk
+   19  sudo mount /dev/sdc /mnt/testdisk
+   20  ls
+   21  sudo fdisk /dev/sdc
+   22  lsblk
+   23  sudo mkfs /dev/sdc1
+   24  cd Downloads
+   25  ls
+   26  sudo mount /dev/sdc1 /mnt/testdisk
+   27  sudo cp image.jpeg /mnt/testdisk
+   28  sudo rm /mnt/testdisk/image.jpeg
+   29  cd /mnt/testdisk/image.jpeg
+   30  cd /mnt/testdisk
+   31  ls
+   32  sudo unmount /mnt/testdisk
+   33  sudo umount /mnt/testdisk
+   34  cd
+   35  sudo umount /mnt/testdisk
+   36  sha1sum /dev/sdc
+   37  sha256sum /dev/sdc > myhash.txt
+   38  sudo sha256sum /dev/sdc > myhash.txt
+   39  cat myhash.txt
+   40  sudo dd if=/dev/sdc | pv | dd of=evidence.img
+   41  sha256sum evidence.img
+   42  sudo mkdir -p /demo/recoverd
+   43  sudo apt update 
+   44  sudo apt install foremost -y
+   45  sudo foremost -i evidence.img -o /demo/recoverd
+   46  sudo cp /demo/recoverd/jpg/00003074.jpg ~/Desktop
+   47  cd Desktop

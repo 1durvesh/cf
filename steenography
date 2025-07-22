@@ -1,0 +1,20 @@
+cd ~/downloads
+    9  ls
+   1
+   11 cd Downloads
+   12  ls
+   13  sudo mkdir test
+   14  sudo apt install steghide
+   15  sudo mv vividly-colored-hummingbird-nature.jpg test
+   16  cd test
+   17  ls
+   18  sudo nano hi.txt
+   19  sudo steghide embed -cf vividly-colored-hummingbird-nature.jpg -ef hi.txt
+   20 
+   21  sudo steghide embed -cf vividly-colored-hummingbird-nature.jpg -ef hi.txt
+   22  ls
+   23  sudo rm hi.txt
+   24  ls
+   25  sudo steghide extract -sf vividly-colored-hummingbird-nature.jpg 
+   26  ls
+   27  cat hi.txt

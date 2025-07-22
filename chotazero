@@ -1,0 +1,5 @@
+lsblk
+   10  sudo dd if=/dev/zero | pv | of=/dev/sdb ps=1M status=progress
+   11  sudo hexdump -c sdb
+   12  sudo hexdump -c /dev/sdb | head
+   13  ls
